@@ -1,0 +1,21 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui" {
+    themes: all;
+  }
+
+
+body {
+  font-family: "Exo", sans-serif;
+}
+
+
+
+.heading{
+    font-family: "Boldonse", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+}
