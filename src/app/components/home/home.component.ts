@@ -5,13 +5,15 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { OurProgramsComponent } from './our-programs/our-programs.component';
 import { WhyChooseUsComponent } from './why-choose-us/why-choose-us.component';
 import { CurriculumComponent } from './curriculum/curriculum.component';
+import { AdmissionComponent } from './admission/admission.component';
 
 @Component({
   selector: 'app-home',
   imports: [HeaderComponent, HeroComponent, AboutUsComponent,
      OurProgramsComponent,
      WhyChooseUsComponent,
-    CurriculumComponent],
+    CurriculumComponent,
+    AdmissionComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
