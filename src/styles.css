@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+/* styles.css */
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 @plugin "daisyui" {
     themes: all;
   }

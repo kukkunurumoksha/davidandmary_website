@@ -6,6 +6,8 @@ import { OurProgramsComponent } from './our-programs/our-programs.component';
 import { WhyChooseUsComponent } from './why-choose-us/why-choose-us.component';
 import { CurriculumComponent } from './curriculum/curriculum.component';
 import { AdmissionComponent } from './admission/admission.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,9 @@ import { AdmissionComponent } from './admission/admission.component';
      OurProgramsComponent,
      WhyChooseUsComponent,
     CurriculumComponent,
-    AdmissionComponent],
+    AdmissionComponent,
+  ContactComponent,
+FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
