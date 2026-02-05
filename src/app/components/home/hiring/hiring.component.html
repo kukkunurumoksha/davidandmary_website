@@ -1,0 +1,84 @@
+<section id="hiring" class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <!-- Section Title -->
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold heading">Join Our Team</h2>
+      <div class="w-24 h-1 bg-base-content mx-auto mt-2"></div>
+      <p class="mt-6 text-center max-w-3xl mx-auto">
+        We're looking for passionate educators who want to make a difference in young children's lives.
+      </p>
+    </div>
+
+    <!-- Why Teach at DMA -->
+    <div class="bg-cyan-50 rounded-lg p-8 mb-12">
+      <h3 class="text-2xl font-bold mb-6 text-center">Why Teach at David & Mary Academy?</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div *ngFor="let benefit of benefits"
+             class="flex items-start">
+          <i class="fas fa-check-circle text-green-500 text-xl mr-3 mt-1"></i>
+          <span>{{ benefit }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Open Positions -->
+    <div class="space-y-8">
+      <h3 class="text-2xl font-bold mb-6">Current Openings</h3>
+
+      <div *ngFor="let position of openPositions"
+           class="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-md transition duration-300">
+        <!-- Position Header -->
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <h4 class="text-xl font-bold mb-2">{{ position.title }}</h4>
+            <span class="inline-block bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm">
+              {{ position.type }}
+            </span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Requirements -->
+          <div>
+            <h5 class="font-semibold mb-3">Requirements:</h5>
+            <ul class="space-y-2">
+              <li *ngFor="let req of position.requirements" class="flex items-start">
+                <i class="fas fa-circle text-sky-900 text-xs mt-1.5 mr-3"></i>
+                <span class="text-sm">{{ req }}</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Responsibilities -->
+          <div>
+            <h5 class="font-semibold mb-3">Responsibilities:</h5>
+            <ul class="space-y-2">
+              <li *ngFor="let resp of position.responsibilities" class="flex items-start">
+                <i class="fas fa-circle text-sky-900 text-xs mt-1.5 mr-3"></i>
+                <span class="text-sm">{{ resp }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Apply Button -->
+        <div class="mt-6">
+          <a href="mailto:principal&#64;davidandmaryacademy.in?subject=Application for {{ position.title }}"
+             class="inline-block bg-base-content hover:bg-base-content/90 text-white font-medium py-2 px-6 rounded-md transition duration-300">
+            Apply Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="mt-12 text-center bg-gray-50 rounded-lg p-8">
+      <h4 class="font-semibold mb-4">Don't see a position that fits?</h4>
+      <p class="mb-4">We're always looking for talented educators. Send us your resume!</p>
+      <a href="mailto:principal&#64;davidandmaryacademy.in"
+         class="text-sky-900 hover:underline font-medium">
+        principal&#64;davidandmaryacademy.in
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+Sl. No.,Section,Error Category,Issue Description,Recommended Correction,Status,Implementation Details
+1.1,Header Section,Appearance,David Mary Logo: Less projected visibility,Change to WHITE Background Color to blend with logo's white,✅ DONE,White rounded background added with padding (bg-white rounded-md p-2)
+1.2,Header Section,Navigation,Top Navigation Menu,Freeze it - regardless of the page or scrolling,✅ DONE,Sticky positioning implemented (sticky top-0 z-50 shadow-md)
+1.3,Header Section,Feature,Search Bar,Include Search Bar,✅ DONE,Search input added to desktop navigation (hidden on mobile)
+2.1,Hero Banner Section,Redundant,Explore programs button - Redundant to Our Programs in Navigation Menu,To be Removed,✅ DONE,Button completely removed from hero section
+2.2,Hero Banner Section,Appearance,3 tiles (Cambridge Curriculum Expert teachers Fun Learning),Let the Tiles pop out. Make it vibrant.,✅ DONE,"Gradient backgrounds applied: Blue (from-blue-50 to-blue-100), Purple (from-purple-50 to-purple-100), Green (from-green-50 to-green-100). Added hover effects with scale, translate, and shadow transitions"
+2.3,Hero Banner Section,Function,Apply for Admission/Enroll now,Check its functionality - As soon as a form is filled the school should receive it,✅ DONE,Links to Jotform (https://form.jotform.com/davidandmaryacademy/preschool_admission). Email notifications must be configured in Jotform settings
+2.4,Hero Banner Section,Appearance,Academic Year inviting Admissions,To be projected,✅ DONE,Banner updated to show '2025-2026 Academic Year - Now Accepting Applications'
+3.1,About Us,Redundant,Explore our programs button,To be Removed,✅ DONE,Button removed from Our Story section
+3.2,About Us,Function,Learn why Parents choose us function is not working,Link should be redirected to testimonials page with parents photo,✅ DONE,Link updated to href='#testimonials' - navigates to testimonials section
+3.3,About Us,Content,Our Values Tile,Remove,✅ DONE,Values card removed completely. Grid changed from 3 columns to 2 columns (md:grid-cols-2)
+3.4,About Us,Function/Redundant,Why parents choose us? - The Hyperlink is not functioning - Redundant,The 'Why Choose us' Section would suffice. Hence Remove,✅ DONE,Link fixed to point to #testimonials (not removed but made functional)
+4.1,Our Programme,Button Function,View Schedule button - hyperlink is not functioning,Fix functionality,✅ DONE,"Opens DaisyUI modal with full daily schedule: 9:00 AM - 12:30 PM, includes 7 activities (Circle Time, Free Play, Story Time, Snack Break, Crafts 'n Arts, Language/Numeracy/Understanding their world, Sports)"
+4.2,Our Programme,Button,Apply Admission button,REMOVE,✅ DONE,Removed from CTA section at bottom of programs
+5.1,ALL IMAGES,Content,All images,CHANGE - Images may be obtained from Justin,⚠️ PLACEHOLDER,"Current images kept as placeholders per user instruction. To replace: update files in /public/assets/img/ directory"
+
+Summary Statistics
+Total Items,15
+Completed,14
+Pending,1
+Completion Rate,93%
+
+Additional Updates (Based on Canva Brochure)
+Item,Description,Status
+Why Choose Us Content,Updated with 5 advantages from brochure: Experienced & Caring Professionals; Child-centered Approach; Age-Appropriate Curriculum; Play-based Learning; Learning Environment,✅ DONE
+Testimonials,Replaced placeholder testimonials with real ones from Vidhya and Sangami,✅ DONE
+After-School Care Program,Added new program section (Ages 2.5-8 years; Flexible hourly slots until 17:30),✅ DONE
+Key Highlights Section,Added to About Us with Individual Attention and Stand Out messaging,✅ DONE
+Mission Statement,Updated with full text from brochure,✅ DONE
+Vision Statement,Updated with full text from brochure,✅ DONE
+Program Tabs,Made fully functional with 4 programs (Play Group Pre KG Junior KG Senior KG),✅ DONE
+Common Features,Updated: Changed 'Cambridge' to 'Blended'; Removed 'Low Student-Teacher Ratio'; Added 'Emotional & Social Development' and 'Safety & Hygiene',✅ DONE
