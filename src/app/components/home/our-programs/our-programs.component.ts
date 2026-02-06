@@ -48,7 +48,7 @@ export class OurProgramsComponent {
         'Scientific exploration and discovery',
         'Team activities and collaborative learning'
       ],
-      image: '/assets/img/junior-kg.png'
+      image: '/assets/img/junior-kg.jpg'
     },
     {
       id: 3,
@@ -61,7 +61,7 @@ export class OurProgramsComponent {
         'Project-based learning experiences',
         'Leadership and responsibility development'
       ],
-      image: '/assets/img/junior-kg2.png'
+      image: '/assets/img/junior-kg2.jpg'
     }
   ];
 
