@@ -35,7 +35,7 @@ export class OurProgramsComponent {
         'Creative expression through art and music',
         'Building independence and confidence'
       ],
-      image: '/assets/img/pre-kg.png'
+      image: '/assets/img/childhood-bliss.png'
     },
     {
       id: 2,
@@ -48,7 +48,7 @@ export class OurProgramsComponent {
         'Scientific exploration and discovery',
         'Team activities and collaborative learning'
       ],
-      image: '/assets/img/junior-kg.jpg'
+      image: '/assets/img/jeremy1.png'
     },
     {
       id: 3,
@@ -61,7 +61,7 @@ export class OurProgramsComponent {
         'Project-based learning experiences',
         'Leadership and responsibility development'
       ],
-      image: '/assets/img/junior-kg2.jpg'
+      image: '/assets/img/shresta1.png'
     }
   ];
 
