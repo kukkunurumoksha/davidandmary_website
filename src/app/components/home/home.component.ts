@@ -6,8 +6,6 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { OurProgramsComponent } from './our-programs/our-programs.component';
 import { WhyChooseUsComponent } from './why-choose-us/why-choose-us.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
-import { AdmissionComponent } from './admission/admission.component';
-import { HiringComponent } from './hiring/hiring.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from '../footer/footer.component';
 
@@ -17,8 +15,6 @@ import { FooterComponent } from '../footer/footer.component';
      OurProgramsComponent,
      WhyChooseUsComponent,
      TestimonialsComponent,
-    AdmissionComponent,
-    HiringComponent,
   ContactComponent,
 FooterComponent],
   templateUrl: './home.component.html',
