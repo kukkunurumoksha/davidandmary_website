@@ -19,9 +19,11 @@
         </div>
 
         <!-- Testimonial Text -->
-        <p class="text-gray-700 mb-6 italic leading-relaxed">
-          "{{ testimonial.text }}"
-        </p>
+        <div class="text-gray-700 mb-6 space-y-4 italic leading-loose text-base">
+          <p *ngFor="let paragraph of testimonial.paragraphs; let first = first; let last = last">
+            <span *ngIf="first">"</span>{{ paragraph }}<span *ngIf="last">"</span>
+          </p>
+        </div>
 
         <!-- Parent Info -->
         <div class="flex items-center">

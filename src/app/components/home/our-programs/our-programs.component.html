@@ -11,10 +11,11 @@
                 <button *ngFor="let program of programs; let i = index"
                         type="button"
                         (click)="selectProgram(i)"
-                        [class]="'px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-300 ' +
+                        [class]="'px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-300 relative ' +
                                  (selectedProgram === i
                                    ? 'bg-[#1e3a5f] text-white shadow-lg scale-105'
                                    : 'bg-white text-gray-700 hover:bg-[#fef3c7] border-2 border-gray-200')">
+                    <span *ngIf="program.isNew" class="absolute -top-2 -right-2 bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] text-white text-xs font-bold px-2 py-1 rounded-full shadow-md">NEW</span>
                     {{ program.name }}
                 </button>
             </div>
@@ -38,9 +39,14 @@
                             </li>
                         </ul>
 
-                        <button onclick="schedule_modal.showModal()" class="btn-primary-custom">
-                            View Schedule
-                        </button>
+                        <div class="flex flex-wrap gap-4">
+                            <button *ngIf="!programs[selectedProgram].isNew" onclick="schedule_modal.showModal()" class="btn-primary-custom">
+                                View Schedule
+                            </button>
+                            <a href="https://forms.gle/doqF1H7TbdVW2uhk9" target="_blank" class="inline-flex items-center justify-center bg-[#f7c948] hover:bg-[#f59e0b] text-[#1e3a5f] font-bold px-6 py-3 rounded-lg shadow-md transition-all duration-300">
+                                Enquiry
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Right Image -->
@@ -61,7 +67,7 @@
             <div class="mb-12">
                 <h3 class="text-2xl font-bold text-[#1e3a5f] text-center mb-10">Common Features Across All Programs</h3>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Feature 1 -->
                     <div class="card-custom text-center">
                         <div class="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mb-4 shadow-md mx-auto">
@@ -117,71 +123,6 @@
                         </p>
                     </div>
                 </div>
-            </div>
-
-            <!-- After-School Care Section -->
-            <div class="mb-12">
-                <div class="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-[#fbbf24] rounded-2xl p-8 shadow-xl">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] text-white px-4 py-1 rounded-full text-sm font-bold shadow-md">NEW!</span>
-                        <h3 class="text-2xl font-bold text-[#1e3a5f]">After-School Care</h3>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <p class="text-gray-700 mb-4">
-                                Extended care for working parents! Our after-school program provides a safe, nurturing environment
-                                where children can continue learning and playing after regular school hours.
-                            </p>
-                            <ul class="space-y-2">
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i>
-                                    <span><strong>Ages:</strong> 2.5 years to 8 years</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i>
-                                    <span><strong>Timings:</strong> Flexible hourly slots until 17:30 (5:30 PM)</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i>
-                                    <span><strong>Activities:</strong> Homework assistance, recreational activities, and supervised play</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="bg-white rounded-lg p-6 shadow-md">
-                            <h4 class="font-bold text-amber-900 mb-3">What's Included:</h4>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-start">
-                                    <i class="fas fa-circle text-amber-500 text-xs mt-1.5 mr-3"></i>
-                                    <span>Evening snacks</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-circle text-amber-500 text-xs mt-1.5 mr-3"></i>
-                                    <span>Homework support</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-circle text-amber-500 text-xs mt-1.5 mr-3"></i>
-                                    <span>Indoor and outdoor activities</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-circle text-amber-500 text-xs mt-1.5 mr-3"></i>
-                                    <span>Safe and supervised environment</span>
-                                </li>
-                            </ul>
-                            <a href="https://form.jotform.com/davidandmaryacademy/preschool_admission" target="_blank"
-                               class="mt-4 inline-block bg-amber-500 hover:bg-amber-600 text-white font-medium py-2 px-6 rounded-md transition duration-300">
-                                Inquire Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Section -->
-            <div class="text-center">
-                <p class="text-gray-500 text-sm">
-                    Limited seats available for each program. Secure your child's spot today!
-                </p>
             </div>
 
             <!-- Schedule Modal -->

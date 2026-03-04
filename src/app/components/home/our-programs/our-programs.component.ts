@@ -62,6 +62,21 @@ export class OurProgramsComponent {
         'Leadership and responsibility development'
       ],
       image: '/assets/img/shresta1.png'
+    },
+    {
+      id: 4,
+      name: 'After-School Care',
+      age: '2.5 - 8 years',
+      description: 'Extended care for working parents! Our after-school program provides a safe, nurturing environment where children will be safely cared for and engaged in activities after regular school hours.',
+      features: [
+        'Flexible hourly slots until 17:30 (5:30 PM)',
+        'Homework assistance and academic support',
+        'Recreational activities and supervised play',
+        'Indoor and outdoor activities',
+        'Safe and secure environment'
+      ],
+      image: '/assets/img/learning.png',
+      isNew: true
     }
   ];
 
