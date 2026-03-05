@@ -11,7 +11,6 @@ export class WhyChooseUsComponent implements OnInit, OnDestroy {
   carouselImages = [
     { src: '/assets/img/teaching.png', alt: 'Experienced & Caring Professionals' },
     { src: '/assets/img/learning.png', alt: 'Child-centered Approach' },
-    { src: '/assets/img/curriculum.jpg', alt: 'Age-Appropriate Curriculum' },
     { src: '/assets/img/play-group.png', alt: 'Play-based Learning' },
     { src: '/assets/img/unique-learning.png', alt: 'Safe Learning Environment' },
   ];
