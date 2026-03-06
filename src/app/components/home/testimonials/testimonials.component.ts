@@ -12,7 +12,7 @@ export class TestimonialsComponent {
   testimonials = [
     {
       id: 1,
-      name: 'VIDHYA',
+      name: 'Mrs.VIDHYA',
       relation: 'Parent',
       photo: '/assets/img/parent-placeholder.png',
       rating: 5,
@@ -24,7 +24,7 @@ export class TestimonialsComponent {
     },
     {
       id: 2,
-      name: 'SANGAMI',
+      name: 'Mrs.SANGAMI',
       relation: 'Parent',
       photo: '/assets/img/parent-placeholder.png',
       rating: 5,
