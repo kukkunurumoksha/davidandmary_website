@@ -70,10 +70,10 @@
         <!-- Classroom Image and Advantages -->
         <div class="flex flex-col lg:flex-row gap-8 mb-8">
             <!-- Rotating Classroom Images -->
-            <div class="lg:w-1/3 relative overflow-hidden rounded-2xl shadow-lg bg-white">
+            <div class="lg:w-1/3 relative overflow-hidden rounded-2xl shadow-lg">
                 <img [src]="carouselImages[currentImageIndex].src"
                      [alt]="carouselImages[currentImageIndex].alt"
-                     class="w-full h-64 lg:h-96 object-contain md:object-cover transition-opacity duration-400 ease-in-out"
+                     class="w-full h-64 lg:h-96 object-cover transition-opacity duration-400 ease-in-out"
                      [class.opacity-0]="isFading"
                      [class.opacity-100]="!isFading">
             </div>
