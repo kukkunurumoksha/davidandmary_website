@@ -40,7 +40,7 @@
                         </ul>
 
                         <div class="flex flex-wrap gap-4">
-                            <button *ngIf="!programs[selectedProgram].isNew" onclick="schedule_modal.showModal()" class="btn-primary-custom">
+                            <button onclick="schedule_modal.showModal()" class="btn-primary-custom">
                                 View Schedule
                             </button>
                             <a href="https://forms.gle/doqF1H7TbdVW2uhk9" target="_blank" class="inline-flex items-center justify-center bg-[#f7c948] hover:bg-[#f59e0b] text-[#1e3a5f] font-bold px-6 py-3 rounded-lg shadow-md transition-all duration-300">
@@ -128,7 +128,7 @@
                         <div class="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl mb-4 shadow-md mx-auto">
                             <i class="fas fa-bell text-white text-xl"></i>
                         </div>
-                        <h4 class="text-lg font-semibold text-[#1e3a5f] mb-2">Prompt Updates to Parents</h4>
+                        <h4 class="text-lg font-semibold text-[#1e3a5f] mb-2">Prompt Updates </h4>
                         <p class="text-gray-700 text-sm">
                             Regular communication and timely updates to keep parents informed about their child's activities and progress.
                         </p>
@@ -140,39 +140,51 @@
             <dialog id="schedule_modal" class="modal">
                 <div class="modal-box bg-white border-2 border-gray-200 shadow-2xl rounded-2xl max-w-2xl">
                     <h3 class="font-bold text-3xl mb-6 text-[#1e3a5f] text-center">Daily Schedule</h3>
-                    <div class="bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] p-5 rounded-xl mb-6 shadow-md">
-                        <p class="font-bold text-xl text-center text-white">9:00 AM - 12:30 PM</p>
+                    
+                    <!-- After-School Care Schedule -->
+                    <div *ngIf="programs[selectedProgram].scheduleType === 'afterschool'">
+                        <div class="bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] p-5 rounded-xl mb-6 shadow-md">
+                            <p class="font-bold text-xl text-center text-white">2:00 PM - 5:30 PM</p>
+                        </div>
                     </div>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-[#1e3a5f]">Circle Time</strong> - includes songs, conversations</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-[#1e3a5f]">Free Play</strong></span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-[#1e3a5f]">Story Time</strong></span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-[#1e3a5f]">Snack Break</strong></span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-[#1e3a5f]">Crafts 'n Arts</strong></span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-[#1e3a5f]">Language, Numeracy, and Understanding their world</strong></span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-[#1e3a5f]">Sports</strong></span>
-                        </li>
-                    </ul>
+                    
+                    <!-- Regular Programs Schedule -->
+                    <div *ngIf="!programs[selectedProgram].scheduleType || programs[selectedProgram].scheduleType !== 'afterschool'">
+                        <div class="bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] p-5 rounded-xl mb-6 shadow-md">
+                            <p class="font-bold text-xl text-center text-white">9:00 AM - 12:30 PM</p>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
+                                <span class="text-gray-700"><strong class="text-[#1e3a5f]">Circle Time</strong> - includes songs, conversations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
+                                <span class="text-gray-700"><strong class="text-[#1e3a5f]">Free Play</strong></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
+                                <span class="text-gray-700"><strong class="text-[#1e3a5f]">Story Time</strong></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
+                                <span class="text-gray-700"><strong class="text-[#1e3a5f]">Snack Break</strong></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
+                                <span class="text-gray-700"><strong class="text-[#1e3a5f]">Crafts 'n Arts</strong></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
+                                <span class="text-gray-700"><strong class="text-[#1e3a5f]">Language, Numeracy, and Understanding their world</strong></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-amber-400 text-xs mt-1.5 mr-3"></i>
+                                <span class="text-gray-700"><strong class="text-[#1e3a5f]">Sports</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                    
                     <div class="modal-action mt-8">
                         <form method="dialog">
                             <button class="btn-primary-custom">Close</button>

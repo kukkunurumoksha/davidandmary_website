@@ -76,7 +76,8 @@ export class OurProgramsComponent {
         'Safe and secure environment'
       ],
       image: '/assets/img/learning.png',
-      isNew: true
+      isNew: true,
+      scheduleType: 'afterschool'
     }
   ];
 
