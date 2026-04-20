@@ -14,7 +14,7 @@ export class OurProgramsComponent {
     {
       id: 0,
       name: 'Play Group',
-      age: '2.5 - 3 years',
+      age: '2 - 3 years',
       description: 'Our Play Group program creates a nurturing environment where toddlers begin their educational journey through play-based learning.',
       features: [
         'Sensory exploration and discovery',
@@ -66,7 +66,7 @@ export class OurProgramsComponent {
     {
       id: 4,
       name: 'After-School Care',
-      age: '2.5 - 8 years',
+      age: '2 - 8 years',
       description: 'Extended care for working parents! Our after-school program provides a safe, nurturing environment where children will be safely cared for and engaged in activities after regular school hours.',
       features: [
         'Flexible hourly slots until 17:30 (5:30 PM)',
