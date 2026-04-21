@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-// Redeploy trigger
+// Redeploy trigger - 2026-04-21
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
