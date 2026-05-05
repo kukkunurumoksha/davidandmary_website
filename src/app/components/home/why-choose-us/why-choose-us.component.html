@@ -11,11 +11,14 @@
 
         <!-- Carousel Image -->
         <div class="relative overflow-hidden rounded-2xl shadow-lg mb-12 max-w-2xl mx-auto">
-            <img [src]="carouselImages[currentImageIndex].src"
-                 [alt]="carouselImages[currentImageIndex].alt"
-                 class="w-full h-72 md:h-96 object-cover transition-opacity duration-400 ease-in-out"
-                 [class.opacity-0]="isFading"
-                 [class.opacity-100]="!isFading">
+            <div class="relative w-full h-72 md:h-96">
+                <img *ngFor="let image of carouselImages; let i = index"
+                     [src]="image.src"
+                     [alt]="image.alt"
+                     class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
+                     [class.opacity-100]="i === currentImageIndex"
+                     [class.opacity-0]="i !== currentImageIndex">
+            </div>
         </div>
 
         <!-- 8 Points Grid -->

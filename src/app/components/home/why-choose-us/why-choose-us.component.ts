@@ -9,10 +9,12 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 })
 export class WhyChooseUsComponent implements OnInit, OnDestroy {
   carouselImages = [
-    { src: '/assets/img/teaching.png', alt: 'Experienced & Caring Professionals' },
-    { src: '/assets/img/learning.png', alt: 'Child-centered Approach' },
-    { src: '/assets/img/play-group.png', alt: 'Play-based Learning' },
-    { src: '/assets/img/unique-learning.png', alt: 'Safe Learning Environment' },
+    { src: '/assets/img/color_pencils.jpg', alt: 'Happy Learning Environment' },
+    { src: '/assets/img/creative.jpg', alt: 'Creative Activities' },
+    { src: '/assets/img/Gloria.jpg', alt: 'Arts and Crafts' },
+    { src: '/assets/img/Noah2.jpg', alt: 'Play-based Learning' },
+    { src: '/assets/img/friends.jpg', alt: 'Individual Attention' },
+    { src: '/assets/img/painting.jpg', alt: 'Educational Materials' },
   ];
 
   currentImageIndex = 0;
@@ -71,10 +73,6 @@ export class WhyChooseUsComponent implements OnInit, OnDestroy {
   }
 
   private nextImage(): void {
-    this.isFading = true;
-    setTimeout(() => {
-      this.currentImageIndex = (this.currentImageIndex + 1) % this.carouselImages.length;
-      this.isFading = false;
-    }, 400);
+    this.currentImageIndex = (this.currentImageIndex + 1) % this.carouselImages.length;
   }
 }

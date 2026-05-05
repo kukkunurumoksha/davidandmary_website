@@ -22,7 +22,7 @@ export class OurProgramsComponent {
         'Fine and gross motor skill development',
         'Social skills and emotional development'
       ],
-      image: '/assets/img/play-group.png'
+      image: '/assets/img/Gloria2.jpg'
     },
     {
       id: 1,
@@ -35,7 +35,7 @@ export class OurProgramsComponent {
         'Creative expression through art and music',
         'Building independence and confidence'
       ],
-      image: '/assets/img/childhood-bliss.png'
+      image: '/assets/img/painting (2).jpg'
     },
     {
       id: 2,
@@ -48,7 +48,7 @@ export class OurProgramsComponent {
         'Scientific exploration and discovery',
         'Team activities and collaborative learning'
       ],
-      image: '/assets/img/jeremy1.png'
+      image: '/assets/img/playing.jpg'
     },
     {
       id: 3,
@@ -61,7 +61,7 @@ export class OurProgramsComponent {
         'Project-based learning experiences',
         'Leadership and responsibility development'
       ],
-      image: '/assets/img/shresta1.png'
+      image: '/assets/img/childhood-bliss.png'
     },
     {
       id: 4,
@@ -75,7 +75,7 @@ export class OurProgramsComponent {
         //'Indoor and outdoor activities',
         'Safe and secure environment'
       ],
-      image: '/assets/img/learning.png',
+      image: '/assets/img/painting3.jpg',
       isNew: true,
       scheduleType: 'afterschool'
     }
