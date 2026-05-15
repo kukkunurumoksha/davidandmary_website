@@ -5,6 +5,7 @@ import { HeroComponent } from './hero/hero.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { OurProgramsComponent } from './our-programs/our-programs.component';
 import { WhyChooseUsComponent } from './why-choose-us/why-choose-us.component';
+import { GalleryComponent } from './gallery/gallery.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -14,6 +15,7 @@ import { FooterComponent } from '../footer/footer.component';
   imports: [CommonModule, HeaderComponent, HeroComponent, AboutUsComponent,
      OurProgramsComponent,
      WhyChooseUsComponent,
+     GalleryComponent,
      TestimonialsComponent,
   ContactComponent,
 FooterComponent],

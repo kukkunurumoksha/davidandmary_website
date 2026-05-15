@@ -1,0 +1,86 @@
+<section id="gallery" class="py-12 md:py-16 section-light">
+  <div class="container mx-auto px-4 max-w-6xl">
+    
+    <!-- Section Title -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold heading heading-underline">Our Gallery</h2>
+      <p class="text-2xl font-semibold text-[#1e3a5f] mt-6 mb-2">Moments That Matter</p>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        A glimpse into the joy, curiosity and care at David & Mary Academy
+      </p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="flex justify-center gap-4 mb-8 flex-wrap">
+      <button *ngFor="let category of categories"
+              type="button"
+              (click)="selectCategory(category.id)"
+              class="px-8 py-3 rounded-full font-semibold text-lg transition-all duration-500 shadow-md hover:shadow-xl relative overflow-hidden"
+              [style.background-color]="activeCategory === category.id ? category.color : '#f3f4f6'"
+              [style.color]="activeCategory === category.id ? 'white' : '#4b5563'"
+              [style.transform]="activeCategory === category.id ? 'scale(1.05)' : 'scale(1)'"
+              [style.box-shadow]="activeCategory === category.id ? '0 8px 20px rgba(0,0,0,0.15)' : '0 2px 8px rgba(0,0,0,0.08)'">
+        {{ category.name }}
+      </button>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="relative max-w-4xl mx-auto">
+      
+      <!-- Slide with Smooth Crossfade -->
+      <div class="relative overflow-hidden rounded-2xl shadow-2xl gallery-slide-container bg-gray-100" style="height: 500px;">
+        <!-- All Images Stacked -->
+        <div *ngFor="let slide of getActiveCategory().slides; let i = index"
+             class="absolute inset-0 bg-cover bg-center gallery-image transition-opacity duration-1000 ease-in-out"
+             [style.background-image]="'url(' + slide.image + ')'"
+             [class.opacity-100]="i === currentSlideIndex[activeCategory]"
+             [class.opacity-0]="i !== currentSlideIndex[activeCategory]">
+          <!-- Gradient Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+          
+          <!-- Caption -->
+          <div class="absolute bottom-0 left-0 right-0 p-8 text-white z-10">
+            <h3 class="text-3xl font-bold mb-2">{{ slide.title }}</h3>
+            <p class="text-lg opacity-90">{{ slide.subtitle }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Glassmorphism Navigation Arrows -->
+      <button type="button"
+              (click)="prevSlide()"
+              class="gallery-arrow gallery-arrow-left absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300">
+        <i class="fas fa-chevron-left text-gray-800"></i>
+      </button>
+      
+      <button type="button"
+              (click)="nextSlide()"
+              class="gallery-arrow gallery-arrow-right absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300">
+        <i class="fas fa-chevron-right text-gray-800"></i>
+      </button>
+
+      <!-- Dot Indicators & Counter -->
+      <div class="flex items-center justify-center gap-6 mt-6">
+        <!-- Dots -->
+        <div class="flex gap-2">
+          <button *ngFor="let slide of getActiveCategory().slides; let i = index"
+                  type="button"
+                  (click)="goToSlide(i)"
+                  class="transition-all duration-300 rounded-full"
+                  [style.background-color]="getActiveCategory().color"
+                  [style.width]="currentSlideIndex[activeCategory] === i ? '32px' : '8px'"
+                  [style.height]="'8px'"
+                  [style.opacity]="currentSlideIndex[activeCategory] === i ? '1' : '0.4'">
+          </button>
+        </div>
+        
+        <!-- Counter -->
+        <div class="text-gray-600 font-semibold">
+          {{ getCurrentSlideNumber() }} / {{ getTotalSlides() }}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
