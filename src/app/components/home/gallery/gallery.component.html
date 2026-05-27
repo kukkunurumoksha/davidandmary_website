@@ -74,6 +74,15 @@
           </button>
         </div>
         
+        <!-- Pause/Play Button -->
+        <button type="button"
+                (click)="togglePause()"
+                class="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                [style.background-color]="getActiveCategory().color"
+                title="Pause/Play">
+          <i [class]="isPaused ? 'fas fa-play text-white text-xs' : 'fas fa-pause text-white text-xs'"></i>
+        </button>
+        
         <!-- Counter -->
         <div class="text-gray-600 font-semibold">
           {{ getCurrentSlideNumber() }} / {{ getTotalSlides() }}

@@ -22,6 +22,7 @@ interface GalleryCategory {
 })
 export class GalleryComponent implements OnInit, OnDestroy {
   activeCategory = 'learning';
+  isPaused = false;
   currentSlideIndex: { [key: string]: number } = {
     learning: 0,
     playing: 0,
@@ -45,13 +46,16 @@ export class GalleryComponent implements OnInit, OnDestroy {
     },
     {
       id: 'playing',
-      name: 'Playing',
+      name: 'Free Play',
       color: '#D85A30',
       slides: [
         { image: '/assets/img/gallery/play5.jpg', title: 'Fun & Play', subtitle: 'Learning through playful moments' },
         { image: '/assets/img/gallery/play2.jpg', title: 'Playful Learning', subtitle: 'Learning while having fun.' },
+        { image: '/assets/img/gallery/play8.jpg', title: ' Interactive Play', subtitle: 'Learning through play and interaction' },
         { image: '/assets/img/gallery/play7.jpg', title: 'Learning Through Play', subtitle: 'Fun games that build young minds.' },
-        { image: '/assets/img/gallery/playing4.jpg', title: 'Happy Play Time', subtitle: 'Enjoying every playful moment.' }
+        { image: '/assets/img/gallery/play9.jpg', title: 'Indoor Play & Exploration', subtitle: 'Growing together through play' },
+        { image: '/assets/img/gallery/playing4.jpg', title: 'Happy Play Time', subtitle: 'Enjoying every playful moment.' }, 
+        { image: '/assets/img/gallery/play4.jpg', title: ' Letter Puzzles & Fun', subtitle: 'Exploring alphabets through tactile play' }
       ]
     },
     {
@@ -71,9 +75,12 @@ export class GalleryComponent implements OnInit, OnDestroy {
       color: '#E91E63',
       slides: [
         { image: '/assets/img/gallery/arts1.jpg', title: 'Creative Expression', subtitle: 'Exploring creativity through art and craft.' },
+         { image: '/assets/img/gallery/crafts5.jpg', title: 'Coloring & Painting', subtitle: 'Exploring colors and self-expression' },
+        { image: '/assets/img/gallery/play3.jpg', title: 'Creative Clay Crafting', subtitle: 'Learning through art and play' },
+        { image: '/assets/img/gallery/arts2.jpg', title: 'Art & Expression', subtitle: 'Happy hands, happy learners' },
+        { image: '/assets/img/gallery/arts5.jpg', title: 'Paper Craft Fun', subtitle: 'Turning simple paper into creativity.' },
         { image: '/assets/img/gallery/craft1.jpg', title: 'Painting & Drawing', subtitle: 'Creativity grows with every color.' },
-        { image: '/assets/img/gallery/arts4.jpg', title: 'Creative Craft Time', subtitle: 'Little hands creating colorful ideas.' },
-        { image: '/assets/img/gallery/arts5.jpg', title: 'Paper Craft Fun', subtitle: 'Turning simple paper into creativity.' }
+        { image: '/assets/img/gallery/craft3.jpg', title: 'Creative Paper Crafts', subtitle: 'Developing fine motor skills' }
       ]
     },
     {
@@ -123,8 +130,11 @@ export class GalleryComponent implements OnInit, OnDestroy {
   }
 
   startAutoPlay(): void {
+    if (this.isPaused) return;
     this.intervalId = setInterval(() => {
-      this.nextSlide();
+      if (!this.isPaused) {
+        this.nextSlide();
+      }
     }, 3500); // Auto-advance every 3.5 seconds
   }
 
@@ -177,5 +187,14 @@ export class GalleryComponent implements OnInit, OnDestroy {
 
   getTotalSlides(): number {
     return this.getActiveCategory().slides.length;
+  }
+
+  togglePause(): void {
+    this.isPaused = !this.isPaused;
+    if (this.isPaused) {
+      this.stopAutoPlay();
+    } else {
+      this.startAutoPlay();
+    }
   }
 }

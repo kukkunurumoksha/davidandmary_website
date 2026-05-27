@@ -44,6 +44,19 @@ export class TestimonialsComponent {
         'We could clearly see improvement in their communication skills, confidence, and participation in different activities. The school also encouraged creativity, discipline, and social interaction in a very positive way.',
         'Thank you to all the teachers and staff for creating such a safe and happy learning environment for the kids. Highly recommended for early childhood education!'
       ]
+    },
+    {
+      id: 4,
+      name: 'Mr. Chethan Kumar',
+      relation: 'Parent',
+      photo: '/assets/img/parent-placeholder.png',
+      rating: 5,
+      paragraphs: [
+        'My children, aged 2.5 and 4 years, are enrolled at David & Mary Academy Pre-School. Over the past year, we have seen a drastic improvement in their behaviour and discipline, much to our surprise.',
+        'Their communication skills have improved significantly. Their use of "please," "thank you," and apologizing is quite impressive. Their manner of responding, respecting others, and politely acknowledging their mistakes are truly noteworthy.',
+        'In addition, their conversations in English, good pronunciation, improved listening skills, and the positive shift in their personalities deserve special mention.',
+        'I am happy to see these changes in such a short period, and the school truly stays true to its vision of moulding a confident generation in a culture of honour. Enrolling my children here has turned out to be a very good decision. Thanks to all the staff at David & Mary Academy for their care, support, and dedicated efforts.'
+      ]
     }
   ];
 }
