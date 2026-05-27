@@ -51,9 +51,8 @@ export class GalleryComponent implements OnInit, OnDestroy {
       slides: [
         { image: '/assets/img/gallery/play5.jpg', title: 'Fun & Play', subtitle: 'Learning through playful moments' },
         { image: '/assets/img/gallery/play2.jpg', title: 'Playful Learning', subtitle: 'Learning while having fun.' },
-        { image: '/assets/img/gallery/play8.jpg', title: ' Interactive Play', subtitle: 'Learning through play and interaction' },
-        { image: '/assets/img/gallery/play7.jpg', title: 'Learning Through Play', subtitle: 'Fun games that build young minds.' },
         { image: '/assets/img/gallery/play9.jpg', title: 'Indoor Play & Exploration', subtitle: 'Growing together through play' },
+        { image: '/assets/img/gallery/play7.jpg', title: 'Learning Through Play', subtitle: 'Fun games that build young minds.' },
         { image: '/assets/img/gallery/playing4.jpg', title: 'Happy Play Time', subtitle: 'Enjoying every playful moment.' }, 
         { image: '/assets/img/gallery/play4.jpg', title: ' Letter Puzzles & Fun', subtitle: 'Exploring alphabets through tactile play' }
       ]
@@ -64,7 +63,7 @@ export class GalleryComponent implements OnInit, OnDestroy {
       color: '#534AB7',
       slides: [
         { image: '/assets/img/gallery/cm1.jpg', title: 'Proud Classroom Moments', subtitle: 'Celebrating achievements with smiles' },
-        { image: '/assets/img/gallery/cm5.jpg', title: 'Joyful Classroom Activities', subtitle: 'Learning through fun and interaction' },
+        { image: '/assets/img/gallery/play8.jpg', title: 'Joyful Classroom Activities', subtitle: 'Learning through fun and interaction' },
         { image: '/assets/img/gallery/cm3.jpg', title: 'A Day of Learning Begins', subtitle: 'Stepping into fun and discovery' },
         { image: '/assets/img/gallery/cm4.jpg', title: 'A Calm Start to Learning', subtitle: 'Nurturing young minds with care' }
       ]
