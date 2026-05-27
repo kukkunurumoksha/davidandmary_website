@@ -26,7 +26,8 @@ export class GalleryComponent implements OnInit, OnDestroy {
     learning: 0,
     playing: 0,
     teaching: 0,
-    arts: 0
+    arts: 0,
+    events: 0
   };
   private intervalId: ReturnType<typeof setInterval> | null = null;
 
@@ -36,10 +37,10 @@ export class GalleryComponent implements OnInit, OnDestroy {
       name: 'Learning',
       color: '#1D9E75',
       slides: [
-        { image: '/assets/img/gallery/learning1.jpg', title: 'Creative Learning Tools', subtitle: 'Colorful beginnings' },
-        { image: '/assets/img/gallery/learning2.jpg', title: 'Story Time & Literacy', subtitle: 'Developing language skills' },
-        { image: '/assets/img/gallery/learning3.jpg', title: 'Curiosity Corner', subtitle: 'Exploring the world' },
-        { image: '/assets/img/gallery/learning4.jpg', title: 'Arts & Crafts', subtitle: 'Creative expression' }
+        { image: '/assets/img/gallery/learn3.jpg', title: 'Interactive Learning', subtitle: 'Hands-on activities that inspire young minds' },
+        { image: '/assets/img/gallery/learn1.jpg', title: 'Early Writing Skills', subtitle: 'Kids learning to write with confidence.' },
+        { image: '/assets/img/gallery/learning3.jpg', title: 'Creative Learning', subtitle: 'Little minds learning with joy.' },
+        { image: '/assets/img/gallery/learn2.jpg', title: 'Focused Learning', subtitle: 'Building skills step by step.' }
       ]
     },
     {
@@ -47,10 +48,10 @@ export class GalleryComponent implements OnInit, OnDestroy {
       name: 'Playing',
       color: '#D85A30',
       slides: [
-        { image: '/assets/img/gallery/playing1.jpg', title: 'Free Play Time', subtitle: 'Imagination at work' },
-        { image: '/assets/img/gallery/playing2.jpg', title: 'Outdoor Fun', subtitle: 'Active and healthy' },
-        { image: '/assets/img/gallery/playing3.jpg', title: 'Team Games', subtitle: 'Learning together' },
-        { image: '/assets/img/gallery/playing4.jpg', title: 'Sensory Play', subtitle: 'Hands-on discovery' }
+        { image: '/assets/img/gallery/play5.jpg', title: 'Fun & Play', subtitle: 'Learning through playful moments' },
+        { image: '/assets/img/gallery/play2.jpg', title: 'Playful Learning', subtitle: 'Learning while having fun.' },
+        { image: '/assets/img/gallery/play7.jpg', title: 'Learning Through Play', subtitle: 'Fun games that build young minds.' },
+        { image: '/assets/img/gallery/playing4.jpg', title: 'Happy Play Time', subtitle: 'Enjoying every playful moment.' }
       ]
     },
     {
@@ -58,10 +59,10 @@ export class GalleryComponent implements OnInit, OnDestroy {
       name: 'Classroom Moments',
       color: '#534AB7',
       slides: [
-        { image: '/assets/img/gallery/classmoments1.jpg', title: 'One-on-One Attention', subtitle: 'Personalized care' },
-        { image: '/assets/img/gallery/classmoments2.jpg', title: 'Circle Time', subtitle: 'Group learning' },
-        { image: '/assets/img/gallery/classmoments3.jpg', title: 'Value-Based Learning', subtitle: 'Character building' },
-        { image: '/assets/img/gallery/classmoments4.jpg', title: 'Skill Building', subtitle: 'Growing confident learners' }
+        { image: '/assets/img/gallery/cm1.jpg', title: 'Proud Classroom Moments', subtitle: 'Celebrating achievements with smiles' },
+        { image: '/assets/img/gallery/cm5.jpg', title: 'Joyful Classroom Activities', subtitle: 'Learning through fun and interaction' },
+        { image: '/assets/img/gallery/cm3.jpg', title: 'A Day of Learning Begins', subtitle: 'Stepping into fun and discovery' },
+        { image: '/assets/img/gallery/cm4.jpg', title: 'A Calm Start to Learning', subtitle: 'Nurturing young minds with care' }
       ]
     },
     {
@@ -69,10 +70,23 @@ export class GalleryComponent implements OnInit, OnDestroy {
       name: 'Arts & Crafts',
       color: '#E91E63',
       slides: [
-        { image: '/assets/img/gallery/arts1.jpg', title: 'Creative Expression', subtitle: 'Unleashing imagination' },
-        { image: '/assets/img/gallery/arts2.jpg', title: 'Painting & Drawing', subtitle: 'Colorful creations' },
-        { image: '/assets/img/gallery/arts3.jpg', title: 'Craft Projects', subtitle: 'Hands-on creativity' },
-        { image: '/assets/img/gallery/arts4.jpg', title: 'Art Exhibitions', subtitle: 'Showcasing talent' }
+        { image: '/assets/img/gallery/arts1.jpg', title: 'Creative Expression', subtitle: 'Exploring creativity through art and craft.' },
+        { image: '/assets/img/gallery/craft1.jpg', title: 'Painting & Drawing', subtitle: 'Creativity grows with every color.' },
+        { image: '/assets/img/gallery/arts4.jpg', title: 'Creative Craft Time', subtitle: 'Little hands creating colorful ideas.' },
+        { image: '/assets/img/gallery/arts5.jpg', title: 'Paper Craft Fun', subtitle: 'Turning simple paper into creativity.' }
+      ]
+    },
+    {
+      id: 'events',
+      name: 'Events',
+      color: '#3d1212dc',
+      slides: [
+        { image: '/assets/img/gallery/christmas3.jpg', title: 'Christmas Celebration', subtitle: 'Fun-filled Christmas celebrations' },
+        { image: '/assets/img/gallery/christmas4.jpg', title: 'Christmas Dance Moments', subtitle: 'Tiny steps, big celebrations' },
+        { image: '/assets/img/gallery/christmas5.jpg', title: 'Christmas Cheer', subtitle: 'Moments filled with cheer and fun' },
+        { image: '/assets/img/gallery/pocso1.jpg', title: 'POSCO Visit', subtitle: 'A warm welcome and meaningful interaction' },
+        { image: '/assets/img/gallery/pocso2.jpg', title: 'POSCO Interaction Session', subtitle: 'Engaging conversations and shared learning' },
+        { image: '/assets/img/gallery/pocso3.jpg', title: 'POSCO Event Highlights', subtitle: 'Together towards meaningful learning experiences' }
       ]
     }
   ];
