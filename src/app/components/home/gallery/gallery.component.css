@@ -5,6 +5,8 @@
 
 .gallery-image {
   transition: transform 0.7s ease-out, opacity 1s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
 
 /* Glassmorphism Navigation Arrows */
@@ -14,6 +16,7 @@
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 20;
 }
 
 .gallery-arrow:hover {
@@ -24,6 +27,34 @@
 
 .gallery-arrow:active {
   transform: translateY(-50%) scale(1.05);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .gallery-arrow {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  
+  .gallery-arrow i {
+    font-size: 16px;
+  }
+  
+  .gallery-slide-container {
+    height: 280px !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .gallery-slide-container {
+    height: 380px !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .gallery-slide-container {
+    height: 500px !important;
+  }
 }
 
 /* Smooth transitions for all interactive elements */

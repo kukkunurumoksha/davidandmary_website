@@ -28,7 +28,7 @@
     <div class="relative max-w-4xl mx-auto">
       
       <!-- Slide with Smooth Crossfade -->
-      <div class="relative overflow-hidden rounded-2xl shadow-2xl gallery-slide-container bg-gray-100" style="height: 500px;">
+      <div class="relative overflow-hidden rounded-2xl shadow-2xl gallery-slide-container bg-gray-100 h-80 sm:h-96 md:h-[500px]">
         <!-- All Images Stacked -->
         <div *ngFor="let slide of getActiveCategory().slides; let i = index"
              class="absolute inset-0 bg-cover bg-center gallery-image transition-opacity duration-1000 ease-in-out"
@@ -39,9 +39,9 @@
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
           
           <!-- Caption -->
-          <div class="absolute bottom-0 left-0 right-0 p-8 text-white z-10">
-            <h3 class="text-3xl font-bold mb-2">{{ slide.title }}</h3>
-            <p class="text-lg opacity-90">{{ slide.subtitle }}</p>
+          <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 text-white z-10">
+            <h3 class="text-lg sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">{{ slide.title }}</h3>
+            <p class="text-sm sm:text-base md:text-lg opacity-90">{{ slide.subtitle }}</p>
           </div>
         </div>
       </div>
@@ -49,14 +49,14 @@
       <!-- Glassmorphism Navigation Arrows -->
       <button type="button"
               (click)="prevSlide()"
-              class="gallery-arrow gallery-arrow-left absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300">
-        <i class="fas fa-chevron-left text-gray-800"></i>
+              class="gallery-arrow gallery-arrow-left absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all duration-300">
+        <i class="fas fa-chevron-left text-gray-800 text-sm sm:text-base"></i>
       </button>
       
       <button type="button"
               (click)="nextSlide()"
-              class="gallery-arrow gallery-arrow-right absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300">
-        <i class="fas fa-chevron-right text-gray-800"></i>
+              class="gallery-arrow gallery-arrow-right absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all duration-300">
+        <i class="fas fa-chevron-right text-gray-800 text-sm sm:text-base"></i>
       </button>
 
       <!-- Dot Indicators & Counter -->
